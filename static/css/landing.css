@@ -1,0 +1,199 @@
+/* ------------------------------------------------------------------ */
+/* Landing page — hero overrides                                        */
+/* ------------------------------------------------------------------ */
+
+/* Override the 2-col grid from style.css */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 2rem 4rem;
+    max-width: 780px;
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
+/* Title */
+.hero-title {
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+}
+
+.hero-title-accent {
+    display: block;
+    color: var(--accent);
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2rem;
+}
+
+/* Both buttons solid dark */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* ------------------------------------------------------------------ */
+/* Mock browser window                                                  */
+/* ------------------------------------------------------------------ */
+
+.hero-visual {
+    width: 100%;
+}
+
+.mock-window {
+    background: #f0ede8;
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    width: 100%;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+
+.mock-window-chrome {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+}
+
+.mock-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.mock-dot-red    { background: #FF5F57; }
+.mock-dot-yellow { background: #FFBD2E; }
+.mock-dot-green  { background: #28C840; }
+
+/* Stat tiles */
+.mock-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+    margin-bottom: 0.65rem;
+}
+
+.mock-stat-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: left;
+}
+
+.mock-stat-label {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+}
+
+.mock-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+.mock-stat-value--plain {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.mock-stat-change--up   { font-size: 0.8rem; color: var(--danger);  font-weight: 500; }
+.mock-stat-change--good { font-size: 0.8rem; color: var(--accent);  font-weight: 500; }
+.mock-stat-sub          { font-size: 0.8rem; color: var(--ink-muted); }
+
+/* Category bars */
+.mock-categories {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.mock-cat-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mock-cat-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-align: right;
+}
+
+.mock-cat-track {
+    height: 8px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.mock-cat-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.mock-cat-bar--food   { background: #e8a020; }
+.mock-cat-bar--travel { background: #3b82f6; }
+.mock-cat-bar--bills  { background: #7c6fcd; }
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                           */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .mock-stats {
+        grid-template-columns: 1fr;
+    }
+}
